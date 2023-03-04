@@ -1,16 +1,17 @@
 import React from 'react';
 
-type InputStyledProps = {
+interface InputStyledProps  {
   title: string,
   type?: string,
   htmlFor: string,
   onChange?: any,
-  name: string
+  name: string,
+  value?: string
 }
 
-const InputStyled: React.FC<InputStyledProps> = ({ title, type = 'text', htmlFor, onChange, name }) => {
+const InputStyled: React.FC<InputStyledProps> = ({ title, type = 'text', htmlFor, onChange, name, value }) => {
   return (
-    <div className="form-group flex-shrink px-4 w-3/4 mb-4">
+    <div className="form-group flex-shrink px-4 w-10/12 mb-4">
       <label htmlFor={htmlFor} className="inline-block">{title}</label>
       <input type={type}
         className="w-full
@@ -30,6 +31,7 @@ const InputStyled: React.FC<InputStyledProps> = ({ title, type = 'text', htmlFor
         id={htmlFor}
         required
         onChange={e => onChange(e.target.value)}
+        value={value}
         name={name}
       />
     </div>

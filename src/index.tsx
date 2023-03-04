@@ -8,7 +8,7 @@ import RoutesApp from './routes';
 
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { GeneralContextProvider } from './contexts/mainContext';
+import { GeneralContextProvider } from './contexts/generalContext';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

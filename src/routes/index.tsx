@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-import CreateCampaign from '../pages/createCampaign';
+import CreateOrUpdateCampaign from '../pages/CreateOrUpdateCampaign';
 import ListCampaign from '../pages/listCampaign';
 
 const NotFound = () => {
@@ -16,7 +16,7 @@ function RoutesApp() {
       <Routes>
 
         <Route path='/' element={<ListCampaign />} />
-        <Route path='/create' element={<CreateCampaign />} />
+        <Route path='/createUpdate' element={<CreateOrUpdateCampaign />} />
 
         <Route path='*' element={<NotFound />} />
       </Routes>
